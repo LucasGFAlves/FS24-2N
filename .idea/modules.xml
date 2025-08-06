@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Aula11/Aula11.iml" filepath="$PROJECT_DIR$/Aulas/Aula11/Aula11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Aula12/Aula12.iml" filepath="$PROJECT_DIR$/Aulas/Aula12/Aula12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Aulas.iml" filepath="$PROJECT_DIR$/Aulas/Aulas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FS24-2N.iml" filepath="$PROJECT_DIR$/.idea/FS24-2N.iml" />
+    </modules>
+  </component>
+</project>

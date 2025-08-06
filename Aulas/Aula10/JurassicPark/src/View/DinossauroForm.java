@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.Date;
 
 public class DinossauroForm extends JInternalFrame {
 
@@ -131,15 +132,27 @@ public class DinossauroForm extends JInternalFrame {
     }
 
     private void salvarDinossauro() {
+        try {
+            String nome = txtNome.getText().trim();
+            String especie = txtEspecie.getText().trim();
+            Double peso = Double.parseDouble(txtPeso.getText().trim());
+            Double altura  = Double.parseDouble(txtAltura.getText().trim());
+            LocalDate data = LocalDate.parse(txtDataDescoberta.getText().trim());
+
+            controller.cadastrarDinossauro(nome,especie,peso,altura,data);
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
-    /**
-     * Abre uma caixa de diálogo para o usuário digitar um ID e busca o dinossauro correspondente.
+/**
+ * Abre uma caixa de diálogo para o usuário digitar um ID e busca o dinossauro correspondente.
 
-    private void buscarDinossauro() {
-        String idStr = JOptionPane.showInputDialog(this, "Digite o ID do dinossauro para buscar:");
-        if (idStr != null && !idStr.trim().isEmpty()) {
-            try {
-                int id = Integer.parseInt(idStr);
-                car
-     */
+ private void buscarDinossauro() {
+ String idStr = JOptionPane.showInputDialog(this, "Digite o ID do dinossauro para buscar:");
+ if (idStr != null && !idStr.trim().isEmpty()) {
+ try {
+ int id = Integer.parseInt(idStr);
+ car
+ */

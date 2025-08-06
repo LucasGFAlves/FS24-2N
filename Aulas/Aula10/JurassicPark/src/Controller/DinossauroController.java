@@ -1,7 +1,7 @@
 package Controller;
 
 
-import Model.Dao.DinossauroDAO;
+import Model.DAO.DinossauroDAO;
 import Model.Dinossauro;
 
 import java.time.LocalDate;

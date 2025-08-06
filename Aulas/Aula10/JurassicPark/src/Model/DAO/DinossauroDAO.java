@@ -1,9 +1,9 @@
-package Model.Dao;
+package Model.DAO;
 
 import Conexao.ConexaoPostgresDB;
 import Model.Dinossauro;
 import java.sql.*;
-        import java.time.LocalDate;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 

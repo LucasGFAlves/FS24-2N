@@ -1,4 +1,4 @@
-package View;
+
 
 import Controller.DinossauroController;
 
@@ -7,13 +7,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Model.Dinossauro;
+import View.*;
 
-public class MainFrame extends JFrame {
+public class Main extends JFrame {
 
     private JDesktopPane desktopPane;
     private DinossauroController dinossauroController; // Nova instância do DinossauroController
 
-    public MainFrame() {
+    public Main() {
         super("Sistema de Gerenciamento de Dinossauros");
         this.dinossauroController = new DinossauroController(); // Instancia o controller de dinossauros
 
@@ -34,15 +35,12 @@ public class MainFrame extends JFrame {
         JMenu menuDinossauros = new JMenu("Dinossauros");
         JMenuItem itemCadastrarDinossauro = new JMenuItem("Cadastrar Dinossauro");
         JMenuItem itemListarDinossauros = new JMenuItem("Listar Dinossauros");
-        JMenuItem itemSwing = new JMenuItem("teste");
 
         itemCadastrarDinossauro.addActionListener(e -> openDinossauroForm(null));
         itemListarDinossauros.addActionListener(e -> openListaDinossaurosPanel());
-        itemSwing.addActionListener(e -> openPanelTeste());
 
         menuDinossauros.add(itemCadastrarDinossauro);
         menuDinossauros.add(itemListarDinossauros);
-        menuDinossauros.add(itemSwing);
 
         menuBar.add(menuDinossauros);
 
@@ -72,14 +70,9 @@ public class MainFrame extends JFrame {
         listaDinossauros.toFront();
     }
 
-    private void openPanelTeste() {
-        SwingComponentes testeS = new SwingComponentes(); // Passa o dinossauroController
-        desktopPane.add(testeS);
-    }
-
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new MainFrame().setVisible(true);
+            new Main().setVisible(true);
         });
     }
 }
